@@ -28,16 +28,4 @@ Build the project with
 
     make
 
-You should get an executable at this point...
-
-## Build problems
-
-Right now the project builds, but when you run it, you get an error
-
-    Valera@valera-i7 MINGW64 ~/projects/github.com/valera-rozuvan/opengl-3-tests
-    $ make
-    g++ -o tut gl3tut.cpp -lmingw32 -lSDL2main -lSDL2 -lGLEW32 -lopengl32
-
-    Valera@valera-i7 MINGW64 ~/projects/github.com/valera-rozuvan/opengl-3-tests
-    $ ./tut.exe
-    Segmentation fault
+You should get an executable at this point... run it = )
