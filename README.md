@@ -10,17 +10,12 @@ This project is forked from https://github.com/rewolf/gl3tut .
 You need the following MSYS2 packages before you can compile this project:
 
 - mingw-w64-x86_64-gcc
-- mingw-w64-x86_64-gdb
 - make
 - git
-- mingw-w64-x86_64-cmake
 - mingw-w64-x86_64-pkg-config
-- mingw-w64-x86_64-emacs
 - mingw-w64-x86_64-SDL2
 - mingw-w64-x86_64-glew
 - mingw-w64-x86_64-glfw
-
-NOTE: emacs, cmake, pkg-config are optional.
 
 Clone this project with
 
