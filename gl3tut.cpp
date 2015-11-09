@@ -3,10 +3,6 @@
 
 #include "SDL2/SDL.h"
 #ifdef _WIN32
-#	pragma comment(lib, "opengl32.lib")
-#	pragma comment(lib, "glew32.lib")
-#	pragma comment(lib, "sdl.lib")
-#	pragma comment(lib, "sdlmain.lib")
 #	define GLEW_STATIC 1
 #	include "GL/GLEW.h"
 #else
@@ -46,6 +42,8 @@ void	release();
 
 //-----------------------------------------------------------------------------
 int main(int argc, char* argv[]){
+  fprintf(stderr, "[DEBUG] 001\n");
+
 	if (!init_context())
 		return 1;
 
