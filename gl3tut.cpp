@@ -42,8 +42,6 @@ void	release();
 
 //-----------------------------------------------------------------------------
 int main(int argc, char* argv[]){
-  fprintf(stderr, "[DEBUG] 001\n");
-
 	if (!init_context())
 		return 1;
 
@@ -103,6 +101,9 @@ bool
 init_opengl(){
 #ifdef _WIN32
 	GLenum err;
+
+  glewExperimental = GL_TRUE;
+
 	if (GLEW_OK != (err = glewInit())){
 		fprintf(stderr, "Could not init GLEW: %s\n", glewGetErrorString(err));
 		return false;
