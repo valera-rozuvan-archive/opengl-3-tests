@@ -15,7 +15,6 @@ You need the following MSYS2 packages before you can compile this project:
 - mingw-w64-x86_64-pkg-config
 - mingw-w64-x86_64-SDL2
 - mingw-w64-x86_64-glew
-- mingw-w64-x86_64-glfw
 
 Clone this project with
 
@@ -33,14 +32,12 @@ You should get an executable at this point...
 
 ## Build problems
 
-Right now the project doesn't build. I get the following errors
+Right now the project builds, but when you run it, you get an error
 
+    Valera@valera-i7 MINGW64 ~/projects/github.com/valera-rozuvan/opengl-3-tests
     $ make
-    g++ -o tut gl3tut.cpp -I /mingw64/include/SDL2 -I /mingw64/include/GL -L/mingw64/lib -Wl,-rpath,./glew-1.13.0/lib/Release/x64 -lSDL2 -lGLEW32 -lglfw3 -lopengl32
-    C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/5.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): In function `main':
-    C:/repo/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
-    collect2.exe: error: ld returned 1 exit status
-    Makefile:2: ошибка выполнения рецепта для цели «DO_IT»
-    make: *** [DO_IT] Ошибка 1
+    g++ -o tut gl3tut.cpp -lmingw32 -lSDL2main -lSDL2 -lGLEW32 -lopengl32
 
-(Sorry for the Russian locale = ) )
+    Valera@valera-i7 MINGW64 ~/projects/github.com/valera-rozuvan/opengl-3-tests
+    $ ./tut.exe
+    Segmentation fault
